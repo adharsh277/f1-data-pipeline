@@ -26,6 +26,16 @@ Phase	Description
 ☁️ Cloud Storage	Processed file uploaded to Azure Blob using SDK
 📊 Visualization	Power BI Dashboard shows GP winners, driver trends, and race breakdowns
 
+## 🚀 What This Project Does
+Phase	Description
+📦 Data Ingestion	Downloaded Formula 1 Fantasy 2021 dataset from Kaggle
+⚙️ Data Processing	Python script (pandas) to clean and reshape the dataset
+🔁 CI/CD	GitHub Actions pipeline auto-triggers transformation & upload to Azure
+☁️ Cloud Storage	Output CSV stored in Azure Blob (Gen2) using Azure SDK
+📊 Visualization	Power BI dashboard to display race-by-race Grand Prix winners
+
+## 
+
 ## 📊 Power BI Dashboard Highlights
 Built with Power BI Desktop, our dashboard includes:
 
@@ -39,6 +49,30 @@ Built with Power BI Desktop, our dashboard includes:
 
 🏎️ Note: Despite Max Verstappen and Lewis Hamilton battling it out on the track, in our dashboard, they battle in bar charts and slicers 😄
 It’s like F1, but with less carbon emissions and more pandas 🐼
+
+Data source - https://www.kaggle.com/datasets/prathamsharma123/formula-1-fantasy-2021?resource=download
+
+## 🛡️ GitHub Actions CI/CD Flow
+The workflow is defined in .github/workflows/data-pipeline.yml and includes:
+
+Trigger on push
+
+Set up Python & dependencies
+
+Run scripts/transform.py
+
+Upload to Azure Blob via SDK using GitHub Secrets
+
+## 📌 How to Run This Project
+Clone the repo & set up your Python environment
+
+Add your Azure Blob credentials as GitHub Secrets:
+
+AZURE_STORAGE_CONNECTION_STRING
+
+Push changes to trigger CI/CD
+
+View the file in Azure Blob → Load into Power BI via SAS URL
 
 
 ##🧪 CI/CD Pipeline Details
