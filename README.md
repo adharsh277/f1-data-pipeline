@@ -1,4 +1,4 @@
-# 🏎️ Formula 1 2021 Grand Prix Winners — Cloud Data Pipeline & Visualization
+### Formula 1 2021 Grand Prix Winners — Cloud Data Pipeline & Visualization
 
 This project showcases a complete end-to-end **data engineering + DevOps + BI visualization pipeline** based on the 2021 Formula 1 season 🏁.  
 We combined **data transformation with Python**, **Azure Blob Storage for cloud hosting**, **GitHub Actions for CI/CD**, and **Power BI** for interactive insights into which driver conquered each Grand Prix.
